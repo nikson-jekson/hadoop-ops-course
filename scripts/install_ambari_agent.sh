@@ -14,9 +14,9 @@ yum -y install ambari-agent
 # set /etc/hosts
 echo '127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4' > /etc/hosts
 echo '::1 localhost localhost.localdomain localhost6 localhost6.localdomain6' >> /etc/hosts
-echo '192.168.199.2 node1.example.com' >> /etc/hosts
-echo '192.168.199.3 node2.example.com' >> /etc/hosts
-echo '192.168.199.4 node3.example.com' >> /etc/hosts
+echo '10.0.1.5 node1.example.com' >> /etc/hosts
+echo '10.0.1.6 node2.example.com' >> /etc/hosts
+echo '10.0.1.7 node3.example.com' >> /etc/hosts
 
 # replace localhost in node1
 cat /etc/ambari-agent/conf/ambari-agent.ini |sed 's/localhost/node1.example.com/g' > /etc/ambari-agent/conf/ambari-agent.ini.new
